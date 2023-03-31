@@ -10,13 +10,17 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-- task: LinuxPackagePublishingHelper@0
+- task: AzureKeyVault@2
   inputs:
-    samplestring: 'human'
+    azureSubscription: 'pmc-sandbox'
+    KeyVaultName: 'adoext'
+    SecretsFilter: 'ado-publisher'
+    RunAsPreJob: true
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      foo=$(ado-publisher)
+      
+      echo ${#foo}
