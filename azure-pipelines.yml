@@ -21,6 +21,6 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      foo=$(ado-publisher)
+      foo=$(echo $(ado-publisher))
       
       echo ${#foo}
