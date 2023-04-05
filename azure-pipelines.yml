@@ -23,7 +23,7 @@ steps:
     script:
       #!/bin/bash -e
       wget -P /tmp/testpackages https://packages.microsoft.com/yumrepos/azurecore/Packages/a/auoms-2.6.0-5.x86_64.rpm
-      echo $(env)
+      echo "$(env)"
   env:
     ADO_PUBLISHER: $(ado-publisher)
 
