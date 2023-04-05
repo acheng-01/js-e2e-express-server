@@ -22,10 +22,10 @@ steps:
     targetType: 'inline'
     script:
       #!/bin/bash -e
-      mkdir /tmp/testpackages
       wget -P /tmp/testpackages https://packages.microsoft.com/yumrepos/azurecore/Packages/a/auoms-2.6.0-5.x86_64.rpm
   env:
     ADO_PUBLISHER: $(ado-publisher)
+    
 - task: PublishLinuxPackagesPMC@0
   inputs:
     profile: 'ppe'
