@@ -22,6 +22,6 @@ steps:
     targetType: 'inline'
     script:
       #!/bin/bash -e
-      echo $ADO_EXTENSION
+      echo $ADO_PUBLISHER
   env:
-    ADO_EXTENSION: $(ado-extension)
+    ADO_PUBLISHER: $(ado-publisher)
