@@ -22,4 +22,4 @@ steps:
     targetType: 'inline'
     script: |
       #!/bin/bash -e
-      echo "$(ado-publisher)"
+      echo $ADO-PUBLISHER
