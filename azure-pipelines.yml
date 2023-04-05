@@ -20,6 +20,8 @@ steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: |
+    script:
       #!/bin/bash -e
-      echo $ADO-PUBLISHER
+      echo $ADO_EXTENSION
+  env:
+    ADO_EXTENSION: $(ado-extension)
