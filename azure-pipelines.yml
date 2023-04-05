@@ -28,7 +28,7 @@ steps:
 
 - task: PublishLinuxPackagesPMC@0
   inputs:
-    profile: 'prod'
+    profile: 'ppe'
     msal_SNIAuth: 'no-msal-sniauth'
     msal_client_ID: 'd7aedd7c-c2c6-4e86-8126-b72066e0e865'
     package_path: '/tmp/testpackages'
