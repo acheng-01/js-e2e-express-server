@@ -21,4 +21,5 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      echo $(ado-publisher)
+      #!/bin/bash -e
+      echo "$(ado-publisher)"
