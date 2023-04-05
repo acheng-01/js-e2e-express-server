@@ -21,8 +21,4 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      cat ${0}
-      echo "$(ado-publisher)" > /tmp/mycert.pem
-      head -n 1 /tmp/mycert.pem
-      # echo ${#ado-publisher}
-      
+      echo $(ado-publisher)
