@@ -21,12 +21,13 @@ steps:
   inputs:
     targetType: 'inline'
     script:
-      #!/bin/bash -e
-      echo $PMC_CLI_MSAL_CERT
-      env
+      echo $PMC_CLI_MSAL_CERT\n\n
+      env\n\n
       wget -P /tmp/testpackages https://packages.microsoft.com/yumrepos/azurecore/Packages/a/auoms-2.6.0-5.x86_64.rpm
   env:
     PMC_CLI_MSAL_CERT: $(ado-publisher)
+  
+
 
 - task: PublishLinuxPackagesPMC@0
   inputs:
