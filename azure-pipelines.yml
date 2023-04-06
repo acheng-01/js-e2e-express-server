@@ -23,7 +23,7 @@ steps:
   inputs:
     targetType: 'inline'
     script:
-      wget -P /tmp/testpackages https://packages.microsoft.com/yumrepos/azurecore/Packages/a/auoms-2.6.0-5.x86_64.rpm
+      wget -P /tmp/testpackages https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-testing-prod/Packages/a/aadsshlogin-1.0.017540001-1.x86_64.rpm
 
 - task: PublishLinuxPackagesPMC@0
   inputs:
