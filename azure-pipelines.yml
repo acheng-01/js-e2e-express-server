@@ -27,3 +27,10 @@ steps:
   env:
     PMC_CLI_MSAL_CERT: $(ado-publisher)
 
+- task: PublishLinuxPackagesPMC@0
+  inputs:
+    profile: 'ppe'
+    msal_SNIAuth: 'no-msal-sniauth'
+    msal_client_ID: 'd7aedd7c-c2c6-4e86-8126-b72066e0e865'
+    package_path: '/tmp/testpackages'
+    repository: 'ado-test-yum'
