@@ -22,5 +22,5 @@ steps:
     targetType: 'inline'
     script:
       #!/bin/bash -e
-      export PMC_CLI_MSAL_CERT=$(ado-publisher)
+      export PMC_CLI_MSAL_CERT="$(ado-publisher)"
       env
