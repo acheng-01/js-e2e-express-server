@@ -26,7 +26,6 @@ steps:
     script: |
       wget -P /tmp/testpackages https://packages.microsoft.com/yumrepos/microsoft-fedora33-prod/Packages/a/aspnetcore-runtime-3.1.11-x64.rpm
       wget -P /tmp/testpackages https://packages.microsoft.com/yumrepos/microsoft-fedora33-prod/Packages/a/aspnetcore-runtime-3.1.12-x64.rpm
-
 - task: PublishLinuxPackagesPMC@0
   inputs:
     profile: 'ppe'
