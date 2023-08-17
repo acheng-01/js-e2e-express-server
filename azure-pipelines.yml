@@ -6,11 +6,10 @@
 
 
 
-trigger:
-- main
+trigger: none
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'mcr.microsoft.com/pmc/pmc-cli:latest'
 
 steps:
 
@@ -28,11 +27,3 @@ steps:
       wget -P /tmp/testpackages https://packages.microsoft.com/yumrepos/azurecore-test/Packages/a/auoms-2.3.1-0.universal.x64.rpm
       wget -P /tmp/testpackages https://packages.microsoft.com/yumrepos/azurecore-test/Packages/a/azsec-clamav-2.10.0-146.x86_64.rpm
 
-- task: PublishLinuxPackagesPMC@0
-  inputs:
-    profile: 'ppe'
-    msal_SNIAuth: 'no-msal-sniauth'
-    msal_cert: $(devadmin)
-    msal_client_ID: 'c93b1ed1-3b3e-408c-9003-10c87975644a'
-    package_path: '/tmp/testpackages'
-    repository: 'ado-test-yum'
