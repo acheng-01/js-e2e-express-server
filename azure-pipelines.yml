@@ -10,13 +10,12 @@ pool:
   vmImage: 'mcr.microsoft.com/pmc/pmc-cli:latest'
 
 steps:
-
 - task: AzureKeyVault@2
   inputs:
-    azureSubscription: 'CSD-Apt-Linux-NonER-TEMP-SANDBOX(b88ca4c8-592e-4ef9-a17e-b4f29727824c)'
+    azureSubscription: 'CSD-Apt-Linux-NonER-TEMP-SANDBOX (b88ca4c8-592e-4ef9-a17e-b4f29727824c)'
     KeyVaultName: 'pmc-dev'
     SecretsFilter: 'devadmin'
-    RunAsPreJob: true
+    RunAsPreJob: false
 
 - task: Bash@3
   inputs:
