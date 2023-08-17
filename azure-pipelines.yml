@@ -7,7 +7,7 @@
 trigger: none
 
 pool:
-  vmImage: 'mcr.microsoft.com/pmc/pmc-cli:latest'
+  vmImage: mcr.microsoft.com/pmc/pmc-cli
 
 steps:
 - task: AzureKeyVault@2
